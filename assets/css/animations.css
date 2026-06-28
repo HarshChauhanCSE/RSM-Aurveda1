@@ -1,0 +1,465 @@
+/*==================================================
+        RSM AYURVEDA ANIMATIONS
+==================================================*/
+
+
+/*==============================
+Fade Up
+==============================*/
+
+.fade-up{
+
+opacity:0;
+
+transform:translateY(50px);
+
+animation:fadeUp .8s forwards;
+
+}
+
+@keyframes fadeUp{
+
+0%{
+
+opacity:0;
+
+transform:translateY(50px);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+/*==============================
+Fade Left
+==============================*/
+
+.fade-left{
+
+opacity:0;
+
+transform:translateX(-60px);
+
+animation:fadeLeft 1s forwards;
+
+}
+
+@keyframes fadeLeft{
+
+100%{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+}
+
+
+/*==============================
+Fade Right
+==============================*/
+
+.fade-right{
+
+opacity:0;
+
+transform:translateX(60px);
+
+animation:fadeRight 1s forwards;
+
+}
+
+@keyframes fadeRight{
+
+100%{
+
+opacity:1;
+
+transform:translateX(0);
+
+}
+
+}
+
+
+/*==============================
+Zoom In
+==============================*/
+
+.zoom-in{
+
+animation:zoomIn .8s ease;
+
+}
+
+@keyframes zoomIn{
+
+0%{
+
+transform:scale(.7);
+
+opacity:0;
+
+}
+
+100%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+
+/*==============================
+Floating
+==============================*/
+
+.floating{
+
+animation:floating 4s ease-in-out infinite;
+
+}
+
+@keyframes floating{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+
+/*==============================
+Rotate
+==============================*/
+
+.rotate{
+
+animation:rotate 15s linear infinite;
+
+}
+
+@keyframes rotate{
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+
+/*==============================
+Pulse
+==============================*/
+
+.pulse{
+
+animation:pulse 2s infinite;
+
+}
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(1);
+
+}
+
+50%{
+
+transform:scale(1.08);
+
+}
+
+100%{
+
+transform:scale(1);
+
+}
+
+}
+
+
+/*==============================
+Button Ripple
+==============================*/
+
+.btn{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.btn::after{
+
+content:"";
+
+position:absolute;
+
+width:0;
+
+height:0;
+
+background:rgba(255,255,255,.35);
+
+border-radius:50%;
+
+left:50%;
+
+top:50%;
+
+transform:translate(-50%,-50%);
+
+transition:.5s;
+
+}
+
+.btn:hover::after{
+
+width:350px;
+
+height:350px;
+
+}
+
+
+/*==============================
+Card Hover
+==============================*/
+
+.product-card,
+.success-card,
+.testimonial-card,
+.benefit-card,
+.why-card,
+.disease-card{
+
+transition:.4s;
+
+}
+
+.product-card:hover,
+.success-card:hover,
+.testimonial-card:hover,
+.benefit-card:hover,
+.why-card:hover,
+.disease-card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 25px 50px rgba(0,0,0,.18);
+
+}
+
+
+/*==============================
+Icon Animation
+==============================*/
+
+.why-card i,
+.disease-card i,
+.benefit-card i{
+
+transition:.4s;
+
+}
+
+.why-card:hover i,
+.disease-card:hover i,
+.benefit-card:hover i{
+
+transform:rotate(360deg) scale(1.15);
+
+}
+
+
+/*==============================
+Image Hover
+==============================*/
+
+.product-image img,
+.success-card img{
+
+transition:.6s;
+
+}
+
+.product-card:hover img,
+.success-card:hover img{
+
+transform:scale(1.1);
+
+}
+
+
+/*==============================
+Gradient Text
+==============================*/
+
+.gradient-text{
+
+background:linear-gradient(90deg,#1B5E20,#D4AF37);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+
+/*==============================
+Glass Effect
+==============================*/
+
+.glass{
+
+background:rgba(255,255,255,.25);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.4);
+
+}
+
+
+/*==============================
+Scroll Indicator
+==============================*/
+
+.scroll-down{
+
+position:absolute;
+
+left:50%;
+
+bottom:35px;
+
+transform:translateX(-50%);
+
+animation:scrollDown 2s infinite;
+
+}
+
+.scroll-down i{
+
+font-size:28px;
+
+color:#1B5E20;
+
+}
+
+@keyframes scrollDown{
+
+0%{
+
+transform:translate(-50%,0);
+
+opacity:1;
+
+}
+
+50%{
+
+transform:translate(-50%,15px);
+
+opacity:.4;
+
+}
+
+100%{
+
+transform:translate(-50%,0);
+
+opacity:1;
+
+}
+
+}
+
+
+/*==============================
+Floating Leaves
+==============================*/
+
+.leaf{
+
+position:absolute;
+
+pointer-events:none;
+
+animation:leafMove 10s linear infinite;
+
+opacity:.35;
+
+}
+
+@keyframes leafMove{
+
+0%{
+
+transform:translateY(-100px) rotate(0deg);
+
+}
+
+100%{
+
+transform:translateY(120vh) rotate(360deg);
+
+}
+
+}
+
+
+/*==============================
+Section Reveal
+==============================*/
+
+.reveal{
+
+opacity:0;
+
+transform:translateY(80px);
+
+transition:1s;
+
+}
+
+.reveal.active{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
